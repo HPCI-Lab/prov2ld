@@ -1,0 +1,104 @@
+{
+  "prefix": {
+    "ex": "http://example.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "entity": {
+    "ex:dataset1": {
+      "prov:type": ["ex:Dataset"],
+      "prov:label": [{"$": "Original Dataset", "lang": "en"}],
+      "prov:value": [{"$": "Some data", "type": "xsd:string"}],
+      "ex:size": [{"$": "1024", "type": "xsd:integer"}]
+    },
+    "ex:report1": {
+      "dcterms:title": [{"$": "Analysis Report", "lang": "en"}],
+      "prov:type": ["ex:Report", "prov:Collection"]
+    }
+  },
+  "activity": {
+    "ex:analysis": {
+      "prov:startTime": "2024-01-15T09:00:00Z",
+      "prov:endTime": "2024-01-15T10:30:00Z",
+      "prov:type": ["ex:DataAnalysis"],
+      "prov:label": [{"$": "Data Analysis Process"}]
+    }
+  },
+  "agent": {
+    "ex:researcher": {
+      "prov:type": ["prov:Person"],
+      "foaf:name": [{"$": "Dr. Jane Smith"}],
+      "foaf:mbox": [{"$": "mailto:jane@example.org"}]
+    },
+    "ex:organization": {
+      "prov:type": ["prov:Organization"],
+      "foaf:name": [{"$": "Research Institute"}]
+    },
+    "ex:software": {
+      "prov:type": ["prov:SoftwareAgent"],
+      "prov:label": [{"$": "Analysis Tool v2.0"}]
+    }
+  },
+  "wasGeneratedBy": {
+    "ex:gen1": {
+      "prov:entity": "ex:report1",
+      "prov:activity": "ex:analysis",
+      "prov:time": "2024-01-15T10:30:00Z",
+      "prov:role": ["ex:output"]
+    }
+  },
+  "used": {
+    "ex:use1": {
+      "prov:activity": "ex:analysis",
+      "prov:entity": "ex:dataset1",
+      "prov:time": "2024-01-15T09:15:00Z",
+      "prov:role": ["ex:input"]
+    }
+  },
+  "wasDerivedFrom": {
+    "ex:der1": {
+      "prov:generatedEntity": "ex:report1",
+      "prov:usedEntity": "ex:dataset1",
+      "prov:type": ["prov:Revision"]
+    }
+  },
+  "wasAttributedTo": {
+    "ex:attr1": {
+      "prov:entity": "ex:report1",
+      "prov:agent": "ex:researcher"
+    }
+  },
+  "wasAssociatedWith": {
+    "ex:assoc1": {
+      "prov:activity": "ex:analysis",
+      "prov:agent": "ex:researcher",
+      "prov:role": ["ex:analyst"]
+    },
+    "ex:assoc2": {
+      "prov:activity": "ex:analysis",
+      "prov:agent": "ex:software",
+      "prov:role": ["ex:tool"]
+    }
+  },
+  "actedOnBehalfOf": {
+    "ex:deleg1": {
+      "prov:delegate": "ex:researcher",
+      "prov:responsible": "ex:organization",
+      "prov:activity": "ex:analysis"
+    }
+  },
+  "specializationOf": {
+    "ex:spec1": {
+      "prov:specificEntity": "ex:report1",
+      "prov:generalEntity": "ex:dataset1"
+    }
+  },
+  "hadMember": {
+    "ex:mem1": {
+      "prov:collection": "ex:report1",
+      "prov:entity": "ex:dataset1"
+    }
+  }
+}

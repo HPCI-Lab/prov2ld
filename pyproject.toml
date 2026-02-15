@@ -1,0 +1,33 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = [
+    "src*"
+]
+
+[project]
+name = "prov2ld"
+version = "0.0.1"
+authors = [
+  { name="Gabriele Padovani", email="gabriele.padovani@unitn.it" },
+]
+description = "A lightweight Python script to convert PROV-JSON documents to PROV-JSONLD format according to the W3C PROV-JSONLD specification."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-or-later"
+dependencies = []
+
+[project.scripts]
+prov2ld = "src.prov2ld.__main__:main"
+ld2viz = "src.ld2viz.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/HPCI-Lab/prov2ld"
+Issues = "https://github.com/HPCI-Lab/prov2ld/issues"

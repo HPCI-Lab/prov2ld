@@ -1,0 +1,3 @@
+# No external dependencies required
+# This converter uses only Python standard library (json, sys, pathlib, argparse)
+# Python 3.6+ is required
