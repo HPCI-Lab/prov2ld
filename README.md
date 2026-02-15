@@ -48,6 +48,11 @@ brew install graphviz
 
 Installers are at the [Download page of GraphViz](https://graphviz.org/download/). 
 
+## Installation
+
+```bash
+pip install prov2ld
+```
 
 ## Basic Usage
 
