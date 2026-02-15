@@ -9,9 +9,6 @@
   <p align="center">
     A lightweight Python script to convert PROV-JSON documents to PROV-JSONLD format according to the W3C PROV-JSONLD specification.
     <br />
-    <a href="https://hpci-lab.github.io/prov2ld/"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
     <a href="https://github.com/HPCI-Lab/prov2ld/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
     <a href="https://github.com/HPCI-Lab/prov2ld/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
