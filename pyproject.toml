@@ -10,7 +10,7 @@ include = [
 
 [project]
 name = "prov2ld"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Gabriele Padovani", email="gabriele.padovani@unitn.it" },
 ]
@@ -25,8 +25,8 @@ license = "GPL-3.0-or-later"
 dependencies = []
 
 [project.scripts]
-prov2ld = "src.prov2ld.__main__:main"
-ld2viz = "src.ld2viz.__main__:main"
+prov2ld = "src.__prov2ld__:main"
+ld2viz = "src.__ld2viz__:main"
 
 [project.urls]
 Homepage = "https://github.com/HPCI-Lab/prov2ld"

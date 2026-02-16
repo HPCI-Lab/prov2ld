@@ -324,8 +324,8 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     
-    parser.add_argument('input', type=str, required=True, help='Input PROV-JSONLD file (or stdin)')
-    parser.add_argument('output', type=str, required=True, help='Output DOT file (or stdout)')
+    parser.add_argument('input', type=str, help='Input PROV-JSONLD file (or stdin)')
+    parser.add_argument('output', type=str, help='Output DOT file (or stdout)')
     parser.add_argument('--show-attr', type=bool, default=False, help='If attributes are shown or not')
     parser.add_argument('--render', type=str, default="png", choices=['png', 'pdf', 'svg'], help='Automatically render to image format (requires graphviz)')
     
