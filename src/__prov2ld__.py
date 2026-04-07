@@ -1,5 +1,4 @@
 import json
-import sys
 from typing import Dict, List, Any
 import argparse
 
